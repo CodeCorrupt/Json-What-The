@@ -11,9 +11,9 @@ module.exports = (app) => {
 
   //////////////////////////////////////////////////////////////////////////////
   // Authentication Routes
-  app.post('/api/login',
+  app.get('/api/login',
     (req, res) => {
-      let jwt_token = utils.generateToken();
+      var jwt_token = utils.generateToken();
       res.json({
         success: true,
         token: jwt_token,
@@ -21,7 +21,7 @@ module.exports = (app) => {
       });
     }
   );
-  app.post('/api/verify', jwt_verify, (req, res) => {
+  app.get('/api/verify', jwt_verify, (req, res) => {
     res.json({
       success: true,
       message: "your token is valid"

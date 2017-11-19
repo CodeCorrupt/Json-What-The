@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 
 const generateToken = () => {
-  let token = jwt.sign(
+  var token = jwt.sign(
     {
       message: "almost there",
       url: `/api/${process.env.FLAG_ENDPOINT}`

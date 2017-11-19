@@ -1,4 +1,3 @@
-'use strict';
 // Require in environment variables
 require('dotenv').config();
 

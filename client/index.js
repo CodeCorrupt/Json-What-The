@@ -2,11 +2,11 @@ var Client = require('node-rest-client').Client;
 var client = new Client();
 
 // registering remote methods
-client.registerMethod("getKey", "http://localhost:8000/api/login", "post");
-client.registerMethod("verify", "http://localhost:8000/api/verify", "post")
+client.registerMethod("getKey", "http://localhost:8000/api/login", "get");
+client.registerMethod("verify", "http://localhost:8000/api/verify", "get")
 
-let failCount = 0;
-let args = {
+var failCount = 0;
+var args = {
     headers: { "Authorization": "" } // request headers
 };
 

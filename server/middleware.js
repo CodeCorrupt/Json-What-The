@@ -1,7 +1,7 @@
 const utils = require('./authorization/utilities');
 
 const jwt_verify = (req, res, next) => {
-  let authorization = req.header("Authorization");
+  var authorization = req.header("Authorization");
   console.log(authorization)
   if (!authorization
   || authorization.split(' ').length !== 2
@@ -13,7 +13,7 @@ const jwt_verify = (req, res, next) => {
     res.end();
     return;
   }
-  token = authorization.split(' ')[1];
+  var token = authorization.split(' ')[1];
   utils.verify(token, function(err, data) {
     if (err) {
       res.status(401).json({
