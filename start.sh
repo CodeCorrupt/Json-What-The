@@ -7,16 +7,18 @@ control_c() {
 }
 
 pushd ./server
-npm install 2>&1 > ../server_install.log
-npm start 2>&1 > ../server.log &
+npm start > ../server.log 2>&1 &
 SERVER=$!
 popd
 
+sleep 2
+
 pushd ./client
-npm install 2>&1 > ../client_install.log
-npm start 2>&1 > ../client.log &
+npm start > ../client.log 2>&1 &
 CLIENT=$!
 popd
+
+echo "Started"
 
 trap control_c SIGINT
 

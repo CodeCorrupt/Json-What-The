@@ -2,6 +2,16 @@
 
 Note: only tested on Ubuntu 16.04
 
+#### Easy Mode
+1) Ensure node and npm is installed
+  1) To install node run `sudo apt install nodejs npm`
+  2) If you get an error running npm start, `sudo apt install nodejs-legacy`
+2) run `./setup.sj` and wait for the "Complete" message
+3) run `./start.sj` and wait for the "Started" message
+4) Launch Wireshark and connect to the localhost/loopback interface
+5) Go! (Don't cheat and look at server or client logs)
+
+#### Manual Mode
 1) Ensure node and npm is installed
   1) To install node run `sudo apt install nodejs npm`
   2) If you get an error running npm start, `sudo apt install nodejs-legacy`
