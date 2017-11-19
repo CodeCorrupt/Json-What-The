@@ -21,9 +21,6 @@ function callVerify() {
     console.log(data);
 
     if(data.success === false) {
-      failCount++;
-    }
-    if(failCount > 1) {
       getKey();
     }
 
@@ -46,4 +43,4 @@ function getKey() {
 }
 
 getKey()
-callVerify();
+setTimeout(callVerify, 2000);
