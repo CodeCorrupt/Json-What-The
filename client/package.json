@@ -1,0 +1,14 @@
+{
+  "name": "json-what-the-client",
+  "version": "0.0.0",
+  "description": "CTF Challenge built for BSides Tampa 2018 - Client",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./index.js"
+  },
+  "author": "Tyler Hoyt",
+  "license": "MIT",
+  "dependencies": {
+    "node-rest-client": "^3.1.0"
+  }
+}

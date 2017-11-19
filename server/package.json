@@ -1,0 +1,23 @@
+{
+  "name": "json-what-the-server",
+  "version": "0.0.0",
+  "description": "CTF Challenge built for BSides Tampa 2018",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon ./server.js"
+  },
+  "keywords": ["CTF", "JWT"],
+  "author": "Tyler Hoyt",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.3",
+    "jsonwebtoken": "^8.1.0",
+    "morgan": "^1.8.2"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "nodemon": "^1.11.0"
+  }
+}
