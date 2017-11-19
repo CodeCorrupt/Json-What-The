@@ -1,5 +1,6 @@
 const jwt_verify = require('../middleware').jwt_verify;
 const utils = require('../authorization/utilities');
+var CryptoJS = require("crypto-js");
 
 module.exports = (app) => {
 
@@ -14,9 +15,11 @@ module.exports = (app) => {
   app.get('/api/login',
     (req, res) => {
       var jwt_token = utils.generateToken();
+      var encrypted = CryptoJS.AES.encrypt(jwt_token, process.env.AES_SECRET).toString();
+      console.log(encrypted);
       res.json({
         success: true,
-        token: jwt_token,
+        token: encrypted,
         timeout: new Date(process.env.JWT_TIMEOUT * 1000) // Date takes milliseconds
       });
     }

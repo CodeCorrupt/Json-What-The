@@ -1,3 +1,6 @@
+require('dotenv').config();
+var CryptoJS = require("crypto-js");
+
 var Client = require('node-rest-client').Client;
 var client = new Client();
 
@@ -34,7 +37,10 @@ function getKey() {
     console.log("GET_KEY")
     console.log(data);
 
-    args.headers.Authorization = `Bearer ${data.token}`
+    var bytes = CryptoJS.AES.decrypt(data.token.toString(), process.env.AES_SECRET);
+    var decrypted = bytes.toString(CryptoJS.enc.Utf8);
+
+    args.headers.Authorization = `Bearer ${decrypted}`
     failCount = 0;
   });
 }

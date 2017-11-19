@@ -2,11 +2,13 @@
 
 pushd ./server
 npm install > ../server_install.log 2>&1
-echo "SldUX1NFQ1JFVD0nd1Zwc3pYT2I3b1BOUlhSUUpKVGFQQUpTR0QnCkpXVF9USU1FT1VUID0gJzIwaCcKCkZMQUdfRU5EUE9JTlQ9J3U0MmQnCkZMQUc9J2ZsYWd7b3VyX2ZsYWd9Jwo=" | base64 --decode > .env
+echo "SldUX1NFQ1JFVD0nd1Zwc3pYT2I3b1BOUlhSUUpKVGFQQUpTR0QnCkpXVF9USU1FT1VUPScyMHMnCgpBRVNfU0VDUkVUPSdrODRrM3NrZGY4MjQza3Nka2pzZGYnCgpGTEFHX0VORFBPSU5UPSd1NDJkJwpGTEFHPSdmbGFne291cl9mbGFnfScK" | base64 --decode > .env
+
 popd
 
 pushd ./client
 npm install > ../client_install.log 2>&1
+echo "QUVTX1NFQ1JFVD0nazg0azNza2RmODI0M2tzZGtqc2RmJwo=" | base64 --decode > .env
 popd
 
 echo "Complete"
